@@ -1,0 +1,19 @@
+<section id="languages" class="section">
+  <div class="section__container">
+    <h2 class="section__title">Idiomas</h2>
+    <div class="languages-grid">
+      @for (lang of languages; track lang.name) {
+        <div class="language-card">
+          <i class="fa-solid fa-language"></i>
+          <h3>{{ lang.name }}</h3>
+          <p class="language-card__level">{{ lang.level }}</p>
+          @if (lang.certification) {
+            <span class="language-card__cert">
+              <i class="fa-solid fa-certificate"></i> {{ lang.certification }}
+            </span>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

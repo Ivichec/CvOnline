@@ -1,0 +1,29 @@
+<section id="experience" class="section">
+  <div class="section__container">
+    <h2 class="section__title">Experiencia laboral</h2>
+    <div class="timeline">
+      @for (exp of experiences; track exp.company + exp.startDate) {
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>{{ exp.position }}</h3>
+              <span class="timeline__date">{{ exp.startDate }} — {{ exp.endDate }}</span>
+            </div>
+            <p class="timeline__company">
+              <i class="fa-solid fa-building"></i> {{ exp.company }} · {{ exp.location }}
+            </p>
+            <p class="timeline__description">{{ exp.description }}</p>
+            @if (exp.achievements.length > 0) {
+              <ul class="timeline__achievements">
+                @for (item of exp.achievements; track item) {
+                  <li>{{ item }}</li>
+                }
+              </ul>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

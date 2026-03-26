@@ -1,0 +1,13 @@
+<section id="courses" class="section">
+  <div class="section__container">
+    <h2 class="section__title">Cursos</h2>
+    <div class="courses-list">
+      @for (course of courses; track course.name) {
+        <div class="course-item">
+          <i class="fa-solid fa-award"></i>
+          <span>{{ course.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

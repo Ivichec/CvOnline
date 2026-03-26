@@ -1,0 +1,155 @@
+.cv-pdf {
+  display: none;
+}
+
+@media print {
+  .cv-pdf {
+    display: block !important;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1a1a1a;
+    font-size: 10pt;
+    line-height: 1.4;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .cv-header {
+    text-align: left;
+    margin-bottom: 0.3rem;
+
+    h1 {
+      font-size: 28pt;
+      font-weight: 800;
+      margin: 0 0 0.1rem;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+    }
+  }
+
+  .cv-summary {
+    font-size: 9.5pt;
+    color: #333;
+    margin: 0 0 0.6rem;
+    line-height: 1.5;
+  }
+
+  .cv-contact-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 9pt;
+
+    span, a {
+      color: #333;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    a {
+      color: #2a7ab5;
+    }
+
+    i {
+      font-size: 10pt;
+      color: #2a7ab5;
+    }
+  }
+
+  .cv-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 0.5rem 0;
+  }
+
+  .cv-section-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #2a7ab5;
+    margin: 0.4rem 0 0.3rem;
+    letter-spacing: 0.5px;
+  }
+
+  .cv-row {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .cv-col-8 {
+    flex: 2;
+  }
+
+  .cv-col-4 {
+    flex: 1;
+  }
+
+  .cv-edu-item {
+    margin-bottom: 0.4rem;
+    font-size: 9.5pt;
+
+    strong {
+      font-size: 9.5pt;
+    }
+  }
+
+  .cv-meta {
+    font-size: 9pt;
+    color: #555;
+  }
+
+  .cv-list {
+    margin: 0.2rem 0 0.3rem;
+    padding-left: 1.2rem;
+    font-size: 9.5pt;
+
+    li {
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
+  }
+
+  .cv-exp-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-exp-header {
+    font-size: 10pt;
+    margin-bottom: 0.1rem;
+
+    strong {
+      color: #2a7ab5;
+    }
+
+    .cv-meta {
+      margin-left: 0.3rem;
+    }
+  }
+
+  .cv-bottom {
+    .cv-col-4 {
+      flex: 1;
+    }
+  }
+
+  .cv-skills-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem 1rem;
+    font-size: 9.5pt;
+
+    .cv-skill-item {
+      &::before {
+        content: '• ';
+      }
+    }
+  }
+}

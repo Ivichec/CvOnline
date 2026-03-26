@@ -43,31 +43,24 @@
   }
 }
 
-// Print styles for PDF download
+// Print styles — show compact CV PDF version
 @media print {
+  .screen-only,
   .navbar,
   .fab,
-  app-footer {
+  app-footer,
+  app-navbar {
     display: none !important;
-  }
-
-  .section {
-    padding: 1.5rem 0 !important;
-    break-inside: avoid;
-  }
-
-  .header {
-    min-height: auto !important;
-    padding: 2rem 0 !important;
-  }
-
-  .fade-in {
-    opacity: 1 !important;
-    transform: none !important;
   }
 
   body {
     background: white !important;
-    color: #1e293b !important;
+    color: #1a1a1a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :host {
+    padding: 0;
   }
 }

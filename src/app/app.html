@@ -1,5 +1,5 @@
 <app-navbar />
-<main>
+<main class="screen-only">
   <app-header />
   <app-about />
   <app-experience />
@@ -11,6 +11,9 @@
   <app-contact />
 </main>
 <app-footer />
+
+<!-- PDF version (only visible when printing) -->
+<app-cv-pdf />
 
 <!-- Download CV button -->
 <button class="fab fab--download" (click)="downloadPdf()" aria-label="Descargar CV">

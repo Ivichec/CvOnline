@@ -1,0 +1,90 @@
+<div class="cv-pdf">
+  <!-- Header -->
+  <header class="cv-header">
+    <h1>{{ cvService.personalInfo().name }}</h1>
+    <h2>{{ cvService.personalInfo().title }}</h2>
+    <p class="cv-summary">{{ cvService.personalInfo().summary }}</p>
+    <div class="cv-contact-row">
+      <span><i class="fa-solid fa-phone"></i> {{ cvService.personalInfo().phone }}</span>
+      <a [href]="cvService.personalInfo().github" target="_blank"><i class="fa-brands fa-github"></i> Ivichec</a>
+      <a [href]="cvService.personalInfo().linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i> Iván Checa</a>
+      <a [href]="'mailto:' + cvService.personalInfo().email"><i class="fa-solid fa-envelope"></i> {{ cvService.personalInfo().email }}</a>
+    </div>
+  </header>
+
+  <hr class="cv-divider" />
+
+  <!-- Formación + Idiomas -->
+  <div class="cv-row">
+    <div class="cv-col-8">
+      <h3 class="cv-section-title">{{ lang.labels().education | uppercase }}</h3>
+      @for (edu of cvService.education(); track edu.institution) {
+        <div class="cv-edu-item">
+          <strong>{{ edu.degree | uppercase }}</strong><br/>
+          <span class="cv-meta">{{ edu.startDate }} - {{ edu.endDate }}</span><br/>
+          <span class="cv-meta">{{ edu.institution }}</span>
+        </div>
+      }
+    </div>
+    <div class="cv-col-4">
+      <h3 class="cv-section-title">{{ lang.labels().languages | uppercase }}</h3>
+      <ul class="cv-list">
+        @for (l of cvService.languages(); track l.name) {
+          <li>{{ l.name }}-{{ l.level }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <hr class="cv-divider" />
+
+  <!-- Experiencia -->
+  <h3 class="cv-section-title">{{ lang.labels().experience | uppercase }}</h3>
+  @for (exp of cvService.experiences(); track exp.company) {
+    <div class="cv-exp-item">
+      <div class="cv-exp-header">
+        <strong>{{ exp.company | uppercase }}</strong>
+        <span class="cv-meta">| {{ exp.startDate }} - {{ exp.endDate }}</span>
+      </div>
+      <ul class="cv-list">
+        @for (a of exp.achievements; track a) {
+          <li>{{ a }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  <hr class="cv-divider" />
+
+  <!-- Bottom: Cursos | Lenguajes | BBDD -->
+  <div class="cv-row cv-bottom">
+    <div class="cv-col-4">
+      <h3 class="cv-section-title">{{ lang.labels().courses | uppercase }}</h3>
+      <ul class="cv-list">
+        @for (c of cvService.courses(); track c.name) {
+          <li>{{ c.name }}</li>
+        }
+      </ul>
+    </div>
+    <div class="cv-col-4">
+      <h3 class="cv-section-title">{{ lang.currentLang() === 'es' ? 'LENGUAJES' : 'LANGUAGES' }}</h3>
+      <div class="cv-skills-cols">
+        @for (skill of cvService.skills(); track skill.name) {
+          @if (skill.category === 'Frontend' || skill.category === 'Backend' || skill.category === 'DevOps') {
+            <span class="cv-skill-item">{{ skill.name }}</span>
+          }
+        }
+      </div>
+    </div>
+    <div class="cv-col-4">
+      <h3 class="cv-section-title">{{ lang.currentLang() === 'es' ? 'BASES DE DATOS' : 'DATABASES' }}</h3>
+      <ul class="cv-list">
+        @for (skill of cvService.skills(); track skill.name) {
+          @if (skill.category === 'Bases de datos' || skill.category === 'Databases') {
+            <li>{{ skill.name }}</li>
+          }
+        }
+      </ul>
+    </div>
+  </div>
+</div>

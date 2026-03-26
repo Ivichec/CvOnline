@@ -11,6 +11,7 @@ import { Languages } from './components/languages/languages';
 import { Courses } from './components/courses/courses';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
+import { CvPdf } from './components/cv-pdf/cv-pdf';
 import { CvService } from './services/cv.service';
 
 @Component({
@@ -29,6 +30,7 @@ import { CvService } from './services/cv.service';
     Courses,
     Contact,
     Footer,
+    CvPdf,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

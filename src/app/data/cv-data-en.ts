@@ -7,8 +7,8 @@ export const CV_DATA_EN: CvData = {
     photo: '',
     email: 'ivanchecag2004@gmail.com',
     phone: '+34 611104558',
-    location: 'Madrid, Spain',
-    linkedin: 'https://linkedin.com/in/iv%C3%A1n-checa',
+    location: 'Madrid, Spain',  
+    linkedin: 'https://www.linkedin.com/in/ivanchecagarcia/',
     github: 'https://github.com/Ivichec',
     summary:
       'Full Stack Developer with experience in Angular, .NET and Node.js. Specialized in efficient web applications, relational databases (SQL Server/Oracle), continuous integration with Jenkins and data visualization. Strong focus on clean code, responsive design and collaborative work.',

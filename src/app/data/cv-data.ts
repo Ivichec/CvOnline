@@ -8,7 +8,7 @@ export const CV_DATA: CvData = {
     email: 'ivanchecag2004@gmail.com',
     phone: '+34 611104558',
     location: 'Madrid, España',
-    linkedin: 'https://linkedin.com/in/iv%C3%A1n-checa',
+    linkedin: 'https://www.linkedin.com/in/ivanchecagarcia/',
     github: 'https://github.com/Ivichec',
     summary:
       'Desarrollador Full Stack con experiencia en Angular, .NET y Node.js. Especializado en aplicaciones web eficientes, bases de datos relacionales (SQL Server/Oracle), integración continua con Jenkins y visualización de datos. Fuerte enfoque en código limpio, responsive design y trabajo colaborativo.',

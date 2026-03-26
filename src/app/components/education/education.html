@@ -1,0 +1,18 @@
+<section id="education" class="section">
+  <div class="section__container">
+    <h2 class="section__title">Formación académica</h2>
+    <div class="education-grid">
+      @for (edu of education; track edu.institution + edu.startDate) {
+        <div class="education-card">
+          <div class="education-card__icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>{{ edu.degree }}</h3>
+          <p class="education-card__institution">{{ edu.institution }}</p>
+          <p class="education-card__date">{{ edu.startDate }} — {{ edu.endDate }}</p>
+          <p class="education-card__description">{{ edu.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

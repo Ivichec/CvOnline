@@ -1,0 +1,33 @@
+<section id="projects" class="section">
+  <div class="section__container">
+    <h2 class="section__title">Proyectos destacados</h2>
+    <div class="projects-grid">
+      @for (project of projects; track project.name) {
+        <div class="project-card">
+          <div class="project-card__header">
+            <i class="fa-solid fa-folder-open"></i>
+            <div class="project-card__links">
+              @if (project.repoUrl) {
+                <a [href]="project.repoUrl" target="_blank" aria-label="Repositorio">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              }
+              @if (project.demoUrl) {
+                <a [href]="project.demoUrl" target="_blank" aria-label="Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              }
+            </div>
+          </div>
+          <h3>{{ project.name }}</h3>
+          <p class="project-card__description">{{ project.description }}</p>
+          <div class="project-card__tech">
+            @for (tech of project.technologies; track tech) {
+              <span class="tag">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

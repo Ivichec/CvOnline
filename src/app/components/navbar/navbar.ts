@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,10 @@ import { ThemeService } from '../../services/theme.service';
 export class Navbar {
   menuOpen = false;
 
-  constructor(protected themeService: ThemeService) {}
+  constructor(
+    protected themeService: ThemeService,
+    protected langService: LanguageService,
+  ) {}
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;

@@ -1,8 +1,8 @@
-<section id="experience" class="section">
+<section id="experience" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Experiencia laboral</h2>
+    <h2 class="section__title">{{ lang.labels().experience }}</h2>
     <div class="timeline">
-      @for (exp of experiences; track exp.company + exp.startDate) {
+      @for (exp of cvService.experiences(); track exp.company + exp.startDate) {
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__content">

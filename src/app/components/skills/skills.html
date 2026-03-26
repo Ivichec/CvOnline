@@ -1,8 +1,8 @@
-<section id="skills" class="section">
+<section id="skills" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Habilidades técnicas</h2>
+    <h2 class="section__title">{{ lang.labels().skills }}</h2>
     <div class="skills-categories">
-      @for (entry of skillsByCategory | keyvalue; track entry.key) {
+      @for (entry of cvService.skillsByCategory() | keyvalue; track entry.key) {
         <div class="skills-category">
           <h3 class="skills-category__title">{{ entry.key }}</h3>
           <div class="skills-list">
@@ -13,7 +13,7 @@
                   <span class="skill__level">{{ skill.level }}%</span>
                 </div>
                 <div class="skill__bar">
-                  <div class="skill__fill" [style.width.%]="skill.level"></div>
+                  <div class="skill__fill" [style.width.%]="0" [attr.data-level]="skill.level"></div>
                 </div>
               </div>
             }

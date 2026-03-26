@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../../services/cv.service';
-import { Language } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-languages',
@@ -9,9 +9,8 @@ import { Language } from '../../models/cv.model';
   styleUrl: './languages.scss',
 })
 export class Languages {
-  languages: Language[];
-
-  constructor(private cvService: CvService) {
-    this.languages = this.cvService.getLanguages();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

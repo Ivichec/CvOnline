@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../../services/cv.service';
-import { Experience as ExperienceModel } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,9 +9,8 @@ import { Experience as ExperienceModel } from '../../models/cv.model';
   styleUrl: './experience.scss',
 })
 export class Experience {
-  experiences: ExperienceModel[];
-
-  constructor(private cvService: CvService) {
-    this.experiences = this.cvService.getExperiences();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

@@ -1,3 +1,73 @@
 :host {
   display: block;
 }
+
+.fab {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  z-index: 999;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--download {
+    bottom: 5.5rem;
+    right: 2rem;
+    background: var(--color-primary);
+    color: white;
+  }
+
+  &--top {
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--bg-card);
+    color: var(--color-primary);
+    opacity: 0;
+    pointer-events: none;
+
+    &.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+// Print styles for PDF download
+@media print {
+  .navbar,
+  .fab,
+  app-footer {
+    display: none !important;
+  }
+
+  .section {
+    padding: 1.5rem 0 !important;
+    break-inside: avoid;
+  }
+
+  .header {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: #1e293b !important;
+  }
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../../services/cv.service';
-import { Project } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,9 +9,8 @@ import { Project } from '../../models/cv.model';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  projects: Project[];
-
-  constructor(private cvService: CvService) {
-    this.projects = this.cvService.getProjects();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

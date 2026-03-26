@@ -1,8 +1,8 @@
-<section id="education" class="section">
+<section id="education" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Formación académica</h2>
+    <h2 class="section__title">{{ lang.labels().education }}</h2>
     <div class="education-grid">
-      @for (edu of education; track edu.institution + edu.startDate) {
+      @for (edu of cvService.education(); track edu.institution + edu.startDate) {
         <div class="education-card">
           <div class="education-card__icon">
             <i class="fa-solid fa-graduation-cap"></i>

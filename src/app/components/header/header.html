@@ -2,25 +2,27 @@
   <div class="header__content">
     <div class="header__photo">
       <div class="header__photo-placeholder">
-        <span>{{ info.name.charAt(0) }}</span>
+        <span>{{ cvService.personalInfo().name.charAt(0) }}</span>
       </div>
     </div>
-    <h1 class="header__name">{{ info.name }}</h1>
-    <h2 class="header__title">{{ info.title }}</h2>
+    <h1 class="header__name">{{ cvService.personalInfo().name }}</h1>
+    <h2 class="header__title">
+      <span class="header__typing"></span>
+    </h2>
     <div class="header__contact">
-      <a [href]="'mailto:' + info.email" class="header__contact-item">
-        <i class="fa-solid fa-envelope"></i> {{ info.email }}
+      <a [href]="'mailto:' + cvService.personalInfo().email" class="header__contact-item">
+        <i class="fa-solid fa-envelope"></i> {{ cvService.personalInfo().email }}
       </a>
-      <a [href]="'tel:' + info.phone" class="header__contact-item">
-        <i class="fa-solid fa-phone"></i> {{ info.phone }}
+      <a [href]="'tel:' + cvService.personalInfo().phone" class="header__contact-item">
+        <i class="fa-solid fa-phone"></i> {{ cvService.personalInfo().phone }}
       </a>
       <span class="header__contact-item">
-        <i class="fa-solid fa-location-dot"></i> {{ info.location }}
+        <i class="fa-solid fa-location-dot"></i> {{ cvService.personalInfo().location }}
       </span>
-      <a [href]="info.linkedin" target="_blank" class="header__contact-item">
+      <a [href]="cvService.personalInfo().linkedin" target="_blank" class="header__contact-item">
         <i class="fa-brands fa-linkedin"></i> LinkedIn
       </a>
-      <a [href]="info.github" target="_blank" class="header__contact-item">
+      <a [href]="cvService.personalInfo().github" target="_blank" class="header__contact-item">
         <i class="fa-brands fa-github"></i> GitHub
       </a>
     </div>

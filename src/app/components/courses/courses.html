@@ -1,8 +1,8 @@
-<section id="courses" class="section">
+<section id="courses" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Cursos</h2>
+    <h2 class="section__title">{{ lang.labels().courses }}</h2>
     <div class="courses-list">
-      @for (course of courses; track course.name) {
+      @for (course of cvService.courses(); track course.name) {
         <div class="course-item">
           <i class="fa-solid fa-award"></i>
           <span>{{ course.name }}</span>

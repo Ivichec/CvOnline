@@ -1,5 +1,5 @@
 .header {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,6 +45,19 @@
     font-weight: 400;
     color: var(--color-primary);
     margin: 0 0 2rem;
+    min-height: 2rem;
+  }
+
+  &__typing {
+    &::after {
+      content: '|';
+      animation: blink 0.8s step-end infinite;
+      margin-left: 2px;
+    }
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 
   &__contact {

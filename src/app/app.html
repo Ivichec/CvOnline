@@ -11,3 +11,17 @@
   <app-contact />
 </main>
 <app-footer />
+
+<!-- Download CV button -->
+<button class="fab fab--download" (click)="downloadPdf()" aria-label="Descargar CV">
+  <i class="fa-solid fa-download"></i>
+</button>
+
+<!-- Back to top button -->
+<button
+  class="fab fab--top"
+  [ngClass]="{ visible: showBackToTop }"
+  (click)="scrollToTop()"
+  aria-label="Volver arriba">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>

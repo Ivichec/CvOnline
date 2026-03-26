@@ -1,8 +1,8 @@
-<section id="projects" class="section">
+<section id="projects" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Proyectos destacados</h2>
+    <h2 class="section__title">{{ lang.labels().projects }}</h2>
     <div class="projects-grid">
-      @for (project of projects; track project.name) {
+      @for (project of cvService.projects(); track project.name) {
         <div class="project-card">
           <div class="project-card__header">
             <i class="fa-solid fa-folder-open"></i>

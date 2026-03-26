@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { KeyValuePipe } from '@angular/common';
 import { CvService } from '../../services/cv.service';
-import { Skill } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,9 +11,8 @@ import { Skill } from '../../models/cv.model';
   styleUrl: './skills.scss',
 })
 export class Skills {
-  skillsByCategory: Map<string, Skill[]>;
-
-  constructor(private cvService: CvService) {
-    this.skillsByCategory = this.cvService.getSkillsByCategory();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

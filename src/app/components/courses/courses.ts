@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../../services/cv.service';
-import { Course } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-courses',
@@ -9,9 +9,8 @@ import { Course } from '../../models/cv.model';
   styleUrl: './courses.scss',
 })
 export class Courses {
-  courses: Course[];
-
-  constructor(private cvService: CvService) {
-    this.courses = this.cvService.getCourses();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

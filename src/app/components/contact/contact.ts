@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../../services/cv.service';
-import { PersonalInfo } from '../../models/cv.model';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +9,8 @@ import { PersonalInfo } from '../../models/cv.model';
   styleUrl: './contact.scss',
 })
 export class Contact {
-  info: PersonalInfo;
-
-  constructor(private cvService: CvService) {
-    this.info = this.cvService.getPersonalInfo();
-  }
+  constructor(
+    protected cvService: CvService,
+    protected lang: LanguageService,
+  ) {}
 }

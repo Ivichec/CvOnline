@@ -1,15 +1,15 @@
-<section id="languages" class="section">
+<section id="languages" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Idiomas</h2>
+    <h2 class="section__title">{{ lang.labels().languages }}</h2>
     <div class="languages-grid">
-      @for (lang of languages; track lang.name) {
+      @for (l of cvService.languages(); track l.name) {
         <div class="language-card">
           <i class="fa-solid fa-language"></i>
-          <h3>{{ lang.name }}</h3>
-          <p class="language-card__level">{{ lang.level }}</p>
-          @if (lang.certification) {
+          <h3>{{ l.name }}</h3>
+          <p class="language-card__level">{{ l.level }}</p>
+          @if (l.certification) {
             <span class="language-card__cert">
-              <i class="fa-solid fa-certificate"></i> {{ lang.certification }}
+              <i class="fa-solid fa-certificate"></i> {{ l.certification }}
             </span>
           }
         </div>

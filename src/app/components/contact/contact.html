@@ -1,27 +1,27 @@
-<section id="contact" class="section">
+<section id="contact" class="section fade-in">
   <div class="section__container">
-    <h2 class="section__title">Contacto</h2>
-    <p class="contact__intro">¿Interesado en trabajar juntos? ¡No dudes en contactarme!</p>
+    <h2 class="section__title">{{ lang.labels().contact }}</h2>
+    <p class="contact__intro">{{ lang.labels().contactIntro }}</p>
     <div class="contact-grid">
-      <a [href]="'mailto:' + info.email" class="contact-card">
+      <a [href]="'mailto:' + cvService.personalInfo().email" class="contact-card">
         <i class="fa-solid fa-envelope"></i>
-        <h3>Email</h3>
-        <p>{{ info.email }}</p>
+        <h3>{{ lang.labels().email }}</h3>
+        <p>{{ cvService.personalInfo().email }}</p>
       </a>
-      <a [href]="'tel:' + info.phone" class="contact-card">
+      <a [href]="'tel:' + cvService.personalInfo().phone" class="contact-card">
         <i class="fa-solid fa-phone"></i>
-        <h3>Teléfono</h3>
-        <p>{{ info.phone }}</p>
+        <h3>{{ lang.labels().phone }}</h3>
+        <p>{{ cvService.personalInfo().phone }}</p>
       </a>
-      <a [href]="info.linkedin" target="_blank" class="contact-card">
+      <a [href]="cvService.personalInfo().linkedin" target="_blank" class="contact-card">
         <i class="fa-brands fa-linkedin"></i>
         <h3>LinkedIn</h3>
-        <p>Ver perfil</p>
+        <p>{{ lang.labels().viewProfile }}</p>
       </a>
-      <a [href]="info.github" target="_blank" class="contact-card">
+      <a [href]="cvService.personalInfo().github" target="_blank" class="contact-card">
         <i class="fa-brands fa-github"></i>
         <h3>GitHub</h3>
-        <p>Ver repositorios</p>
+        <p>{{ lang.labels().viewRepos }}</p>
       </a>
     </div>
   </div>

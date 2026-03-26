@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CvData, PersonalInfo, Experience, Education, Skill, Project, Language } from '../models/cv.model';
+import { CvData, PersonalInfo, Experience, Education, Skill, Project, Language, Course } from '../models/cv.model';
 import { CV_DATA } from '../data/cv-data';
 
 @Injectable({
@@ -40,5 +40,9 @@ export class CvService {
 
   getLanguages(): Language[] {
     return this.data.languages;
+  }
+
+  getCourses(): Course[] {
+    return this.data.courses;
   }
 }

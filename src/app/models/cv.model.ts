@@ -50,6 +50,10 @@ export interface Language {
   certification: string;
 }
 
+export interface Course {
+  name: string;
+}
+
 export interface CvData {
   personalInfo: PersonalInfo;
   experiences: Experience[];
@@ -57,4 +61,5 @@ export interface CvData {
   skills: Skill[];
   projects: Project[];
   languages: Language[];
+  courses: Course[];
 }

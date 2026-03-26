@@ -7,6 +7,7 @@ import { Education } from './components/education/education';
 import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
 import { Languages } from './components/languages/languages';
+import { Courses } from './components/courses/courses';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
 
@@ -22,6 +23,7 @@ import { Footer } from './components/footer/footer';
     Skills,
     Projects,
     Languages,
+    Courses,
     Contact,
     Footer,
   ],
